@@ -17,8 +17,8 @@ const formSchema = z.object({
   name: z.string().min(2, "Name must be at least 2 characters."),
   phone: z.string().min(9, "Please enter a valid phone number."),
   email: z.string().email("Please enter a valid email address.").optional().or(z.literal("")),
-  service_type: z.enum(["plumbing", "electrical", "both", "borehole", "solar"], { errorMap: () => ({ message: "Please select a service type." }) }),
-  urgency: z.enum(["routine", "this_week", "emergency"], { errorMap: () => ({ message: "Please select an urgency level." }) }),
+  service_type: z.enum(["plumbing", "electrical", "both", "borehole", "solar"], { message: "Please select a service type." }),
+  urgency: z.enum(["routine", "this_week", "emergency"], { message: "Please select an urgency level." }),
   location: z.string().min(3, "Please enter your city/neighborhood."),
   description: z.string().min(10, "Please describe your issue in a bit more detail."),
 });
