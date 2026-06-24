@@ -64,13 +64,11 @@ export function Navbar() {
             </Link>
           </Button>
           <Sheet open={isOpen} onOpenChange={setIsOpen}>
-            <SheetTrigger asChild>
-              <Button variant="ghost" size="icon" className="md:hidden">
-                <Menu className="h-6 w-6" />
-                <span className="sr-only">Toggle Menu</span>
-              </Button>
+            <SheetTrigger render={<Button variant="ghost" size="icon" className="md:hidden" />}>
+              <Menu className="h-6 w-6" />
+              <span className="sr-only">Toggle Menu</span>
             </SheetTrigger>
-            <SheetContent side="right" className="w-[300px] sm:w-[400px]">
+            <SheetContent side="left" className="w-[300px] sm:w-[400px]">
               <nav className="flex flex-col space-y-4 mt-6">
                 {routes.map((route) => (
                   <Link
