@@ -52,7 +52,7 @@ export default function FAQPage() {
         </div>
 
         <div className="bg-card rounded-xl border p-6 md:p-8 shadow-sm">
-          <Accordion type="single" collapsible className="w-full">
+          <Accordion className="w-full">
             {faqs.map((faq, index) => (
               <AccordionItem key={index} value={`item-${index}`}>
                 <AccordionTrigger className="text-left font-heading text-lg font-bold hover:text-primary">
